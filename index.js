@@ -2,7 +2,7 @@ var MongoClient = require('mongodb').MongoClient;
 var fs = require('fs');
 
 var ca = [fs.readFileSync(__dirname + "/servercert.crt")];
-console.log(ca);
+
 var options = {
     ssl: true,
     sslValidate: true,

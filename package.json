@@ -1,0 +1,14 @@
+{
+  "name": "mongo_module",
+  "version": "1.0.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mongodb": "^3.0.6"
+  },
+  "author": "ParanoiaSystem",
+  "license": "ISC"
+}

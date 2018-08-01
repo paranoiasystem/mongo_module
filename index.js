@@ -1,19 +1,14 @@
 var MongoClient = require('mongodb').MongoClient;
 var fs = require('fs');
 
-//var ca = [fs.readFileSync(__dirname + "/servercert.crt")];
-
-/*var options = {
-    ssl: true,
-    sslValidate: true,
-    sslCA:ca,
-};*/
+var options = {
+    useNewUrlParser: true
+};
 
 var _db;
 
 module.exports.connectDB = (callback) => {
-    //MongoClient.connect(process.env.MONGODB_URL, options, function(err, db) {
-    MongoClient.connect(process.env.MONGODB_URL, function(err, db) {
+    MongoClient.connect(process.env.MONGODB_URL, options, function(err, db) {
         _db = db;
         return callback(err);
     });
